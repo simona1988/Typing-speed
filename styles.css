@@ -1,0 +1,17 @@
+#text-display {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    white-space: pre-wrap; 
+}
+
+#typing-area {
+    width: 60%;
+    height: 60px;
+    font-size: 1.2rem;
+}
+
+#start-btn {
+    width: 10%; 
+    margin-top: 10px;
+    margin-left: 0; 
+}
