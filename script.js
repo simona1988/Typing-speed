@@ -1,3 +1,5 @@
+const TIMER_INTERVAL = 1000;
+
 const sentences = [
     "Typing fast requires practice and patience",
     "The longest love poem in the world is Luceafarul",
@@ -27,8 +29,8 @@ function startTest() {
     typingArea.style.backgroundColor = ""; 
     typingArea.focus();   
     clearInterval(timerInterval);
-    timerInterval = setInterval(updateTimer, 1000);   
-    generateNewSentence();
+    timerInterval = setInterval(updateTimer, TIMER_INTERVAL);   
+    setNewSentence();
 }
 
 function updateTimer() {
@@ -42,7 +44,7 @@ function updateTimer() {
     }
 }
 
-function generateNewSentence() {
+function setNewSentence() {
     if (!isTestRunning) {
         return;
     }
@@ -73,7 +75,7 @@ function checkTyping() {
     const inputText = typingArea.value.trim();
     if (inputText === currentSentence) {
         correctWords += inputText.split(" ").length;
-        generateNewSentence();
+        setNewSentence();
     } else {
         highlightCorrectText();
     }
