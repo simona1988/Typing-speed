@@ -60,14 +60,16 @@ function highlightCorrectText() {
     for (let i = 0; i < currentSentence.length; ++i) {
         if (i < inputText.length) {
             if (inputText[i] === currentSentence[i]) {
-                highlightedSentence += `<span style="color: green">${currentSentence[i]}</span>`;
+                highlightedSentence += `<span style="color: green">` + 
+                    currentSentence[i] + `</span>`;
             } else {
-                highlightedSentence += `<span style="color: red">${currentSentence[i]}</span>`;
+                highlightedSentence += `<span style="color: red">` + 
+                    currentSentence[i] + `</span>`;
             }
         } else {
             highlightedSentence += currentSentence[i];
         }
-    }
+    }           
     textDisplay.innerHTML = highlightedSentence;
 }
 
